@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Painter : MonoBehaviour
 {
+    public double[] X = new[] { 50.0, 50, 450, 450};//{80.0, 120, 280, 490, 470, 320, 80}; //{ 5.0, 7, 10, 25, 30, 30, 35 };
+    public double[] Y = new[] { 50.0, 450, 450, 50};
     public Terrain terrain;
-
-    private double[] X = new[] {40.0, 60, 140, 245, 235, 160, 40}; //{ 5.0, 7, 10, 25, 30, 30, 35 };
-    private double[] Y = new[] {40.0, 140, 180, 200, 100, 40, 40}; //{ 15.0, 25, 10, 20, 23, 40, 35 };
-
     [System.Serializable]
     public class SplatHeights
     {
@@ -50,30 +48,31 @@ public class Painter : MonoBehaviour
             {
                 float terrainHeight = terrainData.GetHeight(y, x); //(y,x)
 
-                /*var ins = inside(x, y, 7, X, Y);
-                if (terrainHeight == 0 && ins == 1)
-                {
-                    Debug.Log(x + " " + y);
-                    terrainHeight = 0.5f;
-                }*/
-                //Debug.Log(terrainHeight);
+                var ins = inside(x, y, X.Length, X, Y);
                 float[] splat = new float[splatHeights.Length];
-                for (int i = 0; i < splatHeights.Length; i++)
+                if (ins == 0)
                 {
-                    float thisNoise = map(Mathf.PerlinNoise(x * 0.03f, y * 0.03f), 0, 1, 0.5f, 1);
-                    float thisHeightStart = splatHeights[i].startingHeight * thisNoise -
-                                            splatHeights[i].overlap * thisNoise;
-                    float nextHeightStart = 0;
-                    if (i != splatHeights.Length - 1)
-                        nextHeightStart = splatHeights[i + 1].startingHeight * thisNoise +
-                                          splatHeights[i + 1].overlap * thisNoise;
-                    if (i == splatHeights.Length - 1 && terrainHeight >= thisHeightStart)
-                        splat[i] = 1;
-                    else if (terrainHeight >= thisHeightStart && terrainHeight <= nextHeightStart)
-                        splat[i] = 1;
+                    splat[0] = 1;
+                }
+                else
+                {
+                    for (int i = 1; i < splatHeights.Length; i++)
+                    {
+                        float thisNoise = map(Mathf.PerlinNoise(x * 0.03f, y * 0.03f), 0, 1, 0.5f, 1);
+                        float thisHeightStart = splatHeights[i].startingHeight * thisNoise -
+                                                splatHeights[i].overlap * thisNoise;
+                        float nextHeightStart = 0;
+                        if (i != splatHeights.Length - 1)
+                            nextHeightStart = splatHeights[i + 1].startingHeight * thisNoise +
+                                              splatHeights[i + 1].overlap * thisNoise;
+                        if (i == splatHeights.Length - 1 && terrainHeight >= thisHeightStart)
+                            splat[i] = 1;
+                        else if (terrainHeight >= thisHeightStart && terrainHeight <= nextHeightStart) //
+                            splat[i] = 1;
+                    }
+                    normalize(splat);
                 }
 
-                normalize(splat);
                 for (int j = 0; j < splatHeights.Length; j++)
                 {
                     splatmapData[x, y, j] = splat[j];

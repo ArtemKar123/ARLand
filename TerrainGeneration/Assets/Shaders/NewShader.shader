@@ -43,7 +43,7 @@
             col += splat_control.g * tex2D (_Splat1, IN.uv_Splat1).rgb;
             col += splat_control.b * tex2D (_Splat2, IN.uv_Splat2).rgb;
             col += splat_control.a * tex2D (_Splat3, IN.uv_Splat0).rgb;
-            //clip(0.5-splat_control.r);
+            clip(0.5-splat_control.r);
             o.Albedo = col;
             o.Alpha = 1;
             if(tex2D(_Splat0, IN.uv_Splat0).a == 0)

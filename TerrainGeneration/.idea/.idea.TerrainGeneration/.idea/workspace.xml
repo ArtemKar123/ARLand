@@ -3,35 +3,51 @@
   <component name="ChangeListManager">
     <list default="true" id="816c83be-e944-4944-aa7a-ae2c8c8d8240" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TerrainGeneration/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TerrainGeneration/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TerrainGeneration/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TerrainGeneration/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TerrainGeneration/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TerrainGeneration/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TerrainGeneration/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TerrainGeneration/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/New Terrain 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/New Terrain 1.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_dir.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_dir.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_light.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_light.exr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_shadowmask.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_shadowmask.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/LightingData.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/LightingData.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_dir.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_dir.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_light.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_light.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_shadowmask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/Lightmap-0_comp_shadowmask.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/ReflectionProbe-0.exr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene/ReflectionProbe-0.exr.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Painter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Painter.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/TerrainGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TerrainGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Shaders/NewShader.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shaders/NewShader.shader" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/e946da-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/e946da-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/TerrainTools/PaintTexture" beforeDir="false" afterPath="$PROJECT_DIR$/Library/TerrainTools/PaintTexture" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/02/02cf405c1861b454bbac55643bb3fa93" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/02/02cf405c1861b454bbac55643bb3fa93" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/02/02cf405c1861b454bbac55643bb3fa93.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/02/02cf405c1861b454bbac55643bb3fa93.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/6a/6a77b8c1a39c9284ebd5400355f36500" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/6a/6a77b8c1a39c9284ebd5400355f36500" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/6a/6a77b8c1a39c9284ebd5400355f36500.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/6a/6a77b8c1a39c9284ebd5400355f36500.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/02/02cf405c1861b454bbac55643bb3fa93" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/02/02cf405c1861b454bbac55643bb3fa93.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/1a/1abb17eb5b3dfd144bbffed03869d6a7" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/1a/1abb17eb5b3dfd144bbffed03869d6a7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/6a/6a77b8c1a39c9284ebd5400355f36500" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/6a/6a77b8c1a39c9284ebd5400355f36500.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/6a/6ad1aa6f81a303546b9fcd39781c0208" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/6a/6ad1aa6f81a303546b9fcd39781c0208.info" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/7e/7e376725473939d459bc0739e43830b5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/7e/7e376725473939d459bc0739e43830b5.info" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/90/90354d65499f0654da649ac7d4946b9e" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/90/90354d65499f0654da649ac7d4946b9e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/99/992ee053da5f8ab4ea5f0b4430607b57" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/99/992ee053da5f8ab4ea5f0b4430607b57" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/f1/f17b454bbabc8d24c89d4786d48b1c1b.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/f1/f17b454bbabc8d24c89d4786d48b1c1b.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/fa/fa185d5908efa744fb96fa9d27d1e19a" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/fa/fa185d5908efa744fb96fa9d27d1e19a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/fa/fa185d5908efa744fb96fa9d27d1e19a.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/fa/fa185d5908efa744fb96fa9d27d1e19a.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/fa/fa185d5908efa744fb96fa9d27d1e19a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/fa/fa185d5908efa744fb96fa9d27d1e19a.info" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TerrainGeneration.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TerrainGeneration.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/VuforiaEditorScripts.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/VuforiaEditorScripts.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/VuforiaScripts.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/VuforiaScripts.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/VuforiaScripts.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/VuforiaScripts.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,16 +55,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/4BEC26B5-CBC7-4715-8442-F1499E984732/61/f6cdfed7/Single.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Painter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/NewShader.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Shaders/terrain.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/StateCache/Hierarchy/03011d-mainStage.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Shaders/NewSurfaceShader.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/GeneratorEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/TerrainGenerator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Editor/PainterEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Shaders/NewShader.shader" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -57,15 +75,16 @@
         <option value="$PROJECT_DIR$/Assets/Shaders/NewSurfaceShader.shader" />
         <option value="$PROJECT_DIR$/Assets/Shaders/terrain.shader" />
         <option value="$PROJECT_DIR$/Assets/Shaders/Difuse.shader" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Painter.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/GeneratorEditor.cs" />
-        <option value="$PROJECT_DIR$/Assets/Shaders/NewShader.shader" />
         <option value="$PROJECT_DIR$/Assets/Editor/PainterEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/NewShader.shader" />
         <option value="$PROJECT_DIR$/Assets/Scripts/TerrainGenerator.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Painter.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectId" id="1fY4RGzbePO1cSpXOESUyuvfcYY" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -114,6 +133,8 @@
       <workItem from="1596467627023" duration="17859000" />
       <workItem from="1596701408910" duration="17141000" />
       <workItem from="1596779559865" duration="2689000" />
+      <workItem from="1596957372068" duration="140000" />
+      <workItem from="1596957542249" duration="5930000" />
     </task>
     <servers />
   </component>
