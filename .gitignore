@@ -47,7 +47,10 @@ ExportedObj/
 *.pidb.meta
 *.pdb.meta
 *.mdb.meta
+<<<<<<< HEAD
 *.apk
+=======
+>>>>>>> edbcdab274f0f7eda255feed8391370c0e4ed13c
 
 # Unity3D generated file on crash reports
 sysinfo.txt
@@ -59,7 +62,10 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+<<<<<<< HEAD
 
 /TerrainGeneration/Assets/TerrainTexturesPackFree/
 /TerrainGeneration/Assets/Terrain Textures Snow Free Samples/
 /TerrainGeneration/Library/PlayerDataCache/
+=======
+>>>>>>> edbcdab274f0f7eda255feed8391370c0e4ed13c
