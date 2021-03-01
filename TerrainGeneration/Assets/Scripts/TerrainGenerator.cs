@@ -25,11 +25,13 @@ public class TerrainGenerator : MonoBehaviour
 
     public int zoneCount = 8;
 
+    private int currentZone = 0;
+
     private int[,] zones = new int[,] //0-равнина, 1-горы, 2-плоскость(под домики)
     {
         /*x=0;x=1*/
-        /*y=0*/ {1, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0},
-        /*y=1*/ {0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0},
+        /*y=0*/ {2, 2, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0},
+        /*y=1*/ {2, 2, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0},
         {0, 1, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0},
         {0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0},
         {0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0},
@@ -49,12 +51,29 @@ public class TerrainGenerator : MonoBehaviour
     private float[] Rs = new[] {0.2f, 0.4f, 0f};
     private int partialWidth;
 
+    // Случайные зоны
+    void GenerateZones()
+    {
+        for (int i = 0; i < zones.GetLength(0); i++)
+        {
+            for (int j = 0; j < zones.GetLength(1); j++)
+            {
+                zones[i, j] = (int) Random.Range(0, 2);
+            }
+        }
+    }
+
+
+    // Алгоритм diamond square -- https://habr.com/ru/post/249027/
     public void Start()
     {
         Debug.Log("Start " + zoneCount + " " + width);
+        GenerateZones();
+
         int resolution = width;
         WH = (float) width + height;
         partialWidth = width / zoneCount;
+
         // Задаём карту высот
         Terrain terrain = FindObjectOfType<Terrain>();
         float[,] heights = new float[resolution, resolution];
@@ -63,7 +82,8 @@ public class TerrainGenerator : MonoBehaviour
         texture = new Texture2D(width, height);
         cols = new Color32[width * height];
         other_cols = new Color32[width * height];
-        //drawPlasma(width, height);
+
+        // Коэффициент высот
         _coefficient = 0.5f;
         for (int y = 0; y < zoneCount; y++)
         {
@@ -72,13 +92,14 @@ public class TerrainGenerator : MonoBehaviour
                 switch (zones[y, x])
                 {
                     case 0:
-                        GRAIN = 2;
+                        GRAIN = 2; // Коэффициент зернистости
                         break;
                     case 1:
                         GRAIN = 8;
                         break;
                 }
 
+                currentZone = zones[y, x];
                 Debug.Log(x + " " + y + " Grain " + GRAIN);
                 drawPlasma(partialWidth, partialWidth, y * partialWidth, x * partialWidth);
             }
@@ -99,6 +120,7 @@ public class TerrainGenerator : MonoBehaviour
         {
             for (int k = 0; k < resolution; k++) //x
             {
+                /*
                 int zone_x = k / partialWidth;
                 int zone_y = i / partialWidth;
                 float curR = 0f, nextR = 0f, prevR = 0f, nextRY = 0f, prevRY = 0f;
@@ -112,6 +134,7 @@ public class TerrainGenerator : MonoBehaviour
                 {
                     prevR = curR;
                 }
+
                 nextRY = Rs[zones[zone_y + 1, zone_x]];
                 if (zone_y > 0)
                 {
@@ -121,16 +144,17 @@ public class TerrainGenerator : MonoBehaviour
                 {
                     prevRY = curR;
                 }
+
                 if (k % partialWidth < partialWidth / 8)
                 {
                     R = crossfade(k, (zone_x) * partialWidth, partialWidth / 8, prevR, curR);
                     if (i % partialWidth < partialWidth / 8)
                     {
-                        R = (R + crossfade(i, (zone_y) * partialWidth, partialWidth / 8, prevRY, curR))/2;
+                        R = (R + crossfade(i, (zone_y) * partialWidth, partialWidth / 8, prevRY, curR)) / 2;
                     }
                     else if (i % partialWidth > partialWidth - partialWidth / 8)
                     {
-                        R = (R + crossfade(i, (zone_y + 1) * partialWidth, partialWidth / 8, curR, nextRY))/2;
+                        R = (R + crossfade(i, (zone_y + 1) * partialWidth, partialWidth / 8, curR, nextRY)) / 2;
                     }
                 }
                 else if (k % partialWidth > partialWidth - partialWidth / 8)
@@ -138,13 +162,14 @@ public class TerrainGenerator : MonoBehaviour
                     R = crossfade(k, (zone_x + 1) * partialWidth, partialWidth / 8, curR, nextR);
                     if (i % partialWidth < partialWidth / 8)
                     {
-                        R = (R + crossfade(i, (zone_y) * partialWidth, partialWidth / 8, prevRY, curR))/2;
+                        R = (R + crossfade(i, (zone_y) * partialWidth, partialWidth / 8, prevRY, curR)) / 2;
                     }
                     else if (i % partialWidth > partialWidth - partialWidth / 8)
                     {
-                        R = (R + crossfade(i, (zone_y + 1) * partialWidth, partialWidth / 8, curR, nextRY))/2;
+                        R = (R + crossfade(i, (zone_y + 1) * partialWidth, partialWidth / 8, curR, nextRY)) / 2;
                     }
-                }else if (i % partialWidth < partialWidth / 8)
+                }
+                else if (i % partialWidth < partialWidth / 8)
                 {
                     R = crossfade(i, (zone_y) * partialWidth, partialWidth / 8, prevRY, curR);
                 }
@@ -153,22 +178,23 @@ public class TerrainGenerator : MonoBehaviour
                     R = crossfade(i, (zone_y + 1) * partialWidth, partialWidth / 8, curR, nextRY);
                 }
 
-                heights[i, k] = texture.GetPixel(i, k).grayscale * R;
+                if (R <= 0.05f) R += 0.4f;*/
+                heights[i, k] = texture.GetPixel(i, k).grayscale * 0.4f; // * R;
             }
         }
 
         // Применяем изменения
-        terrain.terrainData.size = new Vector3(width, width * 1, height);
-        terrain.terrainData.heightmapResolution = resolution;
+        var terrainData = terrain.terrainData;
+        terrainData.size = new Vector3(width, width * 1, height);
+        terrainData.heightmapResolution = resolution;
         terrain.terrainData.SetHeights(0, 0, heights);
         painter = terrain.GetComponent<Painter>();
         painter.Paint();
     }
 
+    // Попытка сделать плавный переход между зонами
     float crossfade(int x, int midX, int xSpread, float startR, float endR)
     {
-        //int xSpread = endX - startX;
-        // midX -= xSpread / 2;
         if (startR == endR)
             return startR;
         float returnR = 0f;
@@ -198,7 +224,15 @@ public class TerrainGenerator : MonoBehaviour
     float displace(float num)
     {
         float max = num / WH * GRAIN;
-        return Random.Range(-0.5f, 0.5f) * max;
+        switch (currentZone)
+        {
+            case 0:
+                return Random.Range(-0.5f, 0.25f) * max;
+            case 1:
+                return Random.Range(0f, 0.5f) * max;
+        }
+
+        return 0; //Random.Range(0f, 1.5f) * max;
     }
 
     // Вызов функции отрисовки с параметрами
@@ -223,16 +257,19 @@ public class TerrainGenerator : MonoBehaviour
         if (w < 1.0f && h < 1.0f) // || (x > 128 || y > 128)
         {
             float c = (c1 + c2 + c3 + c4) * _coefficient;
-            var ins = inside(x, y, 7, X, Y);
+            var ins = inside(x, y, 7, X, Y); //
             //var ins2 = inside(x, y, 4, InnerX, InnerY);
             cols[(int) x + (int) y * width] = new Color(c, c, c);
+            if (c <= 0) c = 5;
             if (ins == 0)
             {
-                //c = 0;
-            }/*else if (ins == 1 && c <= 0)
+                c = 0;
+            }
+            else if (ins == 1 && c <= 0)
             {
                 c = 255;
-            }*/
+            }
+
             other_cols[(int) x + (int) y * width] = new Color(c, c, c);
         }
         else
@@ -262,6 +299,8 @@ public class TerrainGenerator : MonoBehaviour
         }
     }
 
+
+    // Проверяет, что точка находится в заданном контуре. 
     int inside(double px, double py, int n, double[] x, double[] y)
     {
         int i, j, s;
